@@ -9,15 +9,20 @@ import EmployeeProfile from "./components/EmployeeProfile/EmployeeProfile"
 import TicketBuy from "./components/TicketBuy/TicketBuy"
 import TicketView from "./components/TicketView/TicketView"
 import Donation from "./components/Donation/Donation"
+import CustomerNavbar from "./components/Views/CustomerNavbar"
+import EmployeeNavbar from "./components/Views/EmployeeNavbar"
+import ManagerNavbar from "./components/Views/ManagerNavbar"
+import ClockIn from "./components/ClockIn/ClockIn"
+import AddEnclosureForm from "./components/AddEnclosureForm/AddEnclosureForm"
 import './App.css'; 
 import { Route, Routes } from "react-router-dom"
 
 function App() {
   return (
     <> 
-      <Navbar />
+    
       
-
+      <EmployeeNavbar />
       <div className="container">
         <Routes>
           <Route path="/about-us" element={<AboutUs />} /> 
@@ -29,6 +34,8 @@ function App() {
           <Route path="/ticket-buy" element={<TicketBuy />} />
           <Route path="/ticket-view" element={<TicketView />} />
           <Route path="/donation" element={<Donation />} />
+          <Route path="/clock-in" element={<ClockIn />} />
+          <Route path="/enclosure-entry" element={<AddEnclosureForm />} />
         </Routes>
       </div>
       
