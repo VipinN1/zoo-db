@@ -1,0 +1,12 @@
+/* Home.css */
+.home-container {
+  background-image: url();
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Adjust the height as needed */
+  overflow: hidden;
+  padding: 0;
+}
+/* Home.css */
+
+
