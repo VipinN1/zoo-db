@@ -3,7 +3,6 @@ import axios from 'axios';
 import './ClockIn.css';
 
 function ClockIn() {
-  const [employeeId, setEmployeeId] = useState('');
   const [clockInTime, setClockInTime] = useState(null);
   const [clockOutTime, setClockOutTime] = useState(null);
   const [totalHoursWorked, setTotalHoursWorked] = useState(null);
@@ -13,6 +12,8 @@ function ClockIn() {
     const currentTime = new Date();
     setClockInTime(currentTime);
     setMessage('Clock-in successful');
+    // Backend logic for clock-in time
+    console.log('Clock In Time:', currentTime);
   };
 
   const handleClockOut = () => {
@@ -28,17 +29,20 @@ function ClockIn() {
       setMessage('Clock-out successful');
 
       // Send both employeeId and totalHoursWorked to backend here
-      sendClockOutDataToBackend(employeeId, totalHours);
+      sendClockOutDataToBackend(totalHours);
+      
+      // Backend logic for clock-out time
+      console.log('Clock Out Time:', currentTime);
     } else {
       setMessage('Please clock in before clocking out');
     }
   };
 
-  const sendClockOutDataToBackend = (employeeId, hoursWorked) => {
+  const sendClockOutDataToBackend = (hoursWorked) => {
     // Placeholder for sending clock out data to the backend
     // Replace the URL with your actual backend endpoint
-    console.log(employeeId,hoursWorked)
-    axios.post('/clock-out', { employeeId, hoursWorked })
+    console.log('Hours worked',hoursWorked);
+    axios.post('/clock-out', { hoursWorked })
       .then(response => {
         console.log('Clock out data sent to backend:', response.data);
       })
@@ -50,12 +54,6 @@ function ClockIn() {
   return (
     <div className='clock-in'>
       <h1>Employee Clock In/Out</h1>
-      <div>
-        <label>
-          Employee ID:
-          <input type="text" value={employeeId} onChange={(e) => setEmployeeId(e.target.value)} />
-        </label>
-      </div>
       <br></br>
       <div>
         <button onClick={handleClockIn}>Clock In</button>

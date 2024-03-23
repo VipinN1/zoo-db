@@ -19,12 +19,12 @@ export default function CustomerNavbar() {
           Tickets
           {isHovered && (
             <div className="sub-menu">
-              <CustomLink to="/view-tickets">View Tickets</CustomLink>
-              <CustomLink to="/buy-tickets">Buy Tickets</CustomLink>
+              <CustomLink to="/ticket-view">View Tickets</CustomLink>
+              <CustomLink to="/ticket-buy">Buy Tickets</CustomLink>
             </div>
           )}
         </CustomLink>
-        <CustomLink to="/donate">Donate</CustomLink>
+        <CustomLink to="/donation">Donate</CustomLink>
         <CustomLink to="/about-us">About us</CustomLink>
         <CustomLink to="/sign-in">Sign out</CustomLink>
 

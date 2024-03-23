@@ -20,7 +20,8 @@ body {
   align-items: stretch;
   gap: 2rem;
   padding: 0 1.5rem;
-  border-radius: 10px;
+  border-bottom-left-radius: 15px; /* Add curved edges to the top left corner */
+  border-bottom-right-radius: 15px;
   
 }
 

@@ -14,6 +14,11 @@ import EmployeeNavbar from "./components/Views/EmployeeNavbar"
 import ManagerNavbar from "./components/Views/ManagerNavbar"
 import ClockIn from "./components/ClockIn/ClockIn"
 import AddEnclosureForm from "./components/AddEnclosureForm/AddEnclosureForm"
+import DietForm from "./components/DietForm/DietForm"
+import VeterinarianRecord from "./components/VeterinarianRecord/VeterinarianRecord"
+import Orders from "./components/Orders/Orders"
+import AddAnimal from "./components/AddAnimal/AddAnimal"
+import AddSecurityForm from "./components/AddSecurityForm/AddSecurityForm"
 import './App.css'; 
 import { Route, Routes } from "react-router-dom"
 
@@ -35,7 +40,14 @@ function App() {
           <Route path="/ticket-view" element={<TicketView />} />
           <Route path="/donation" element={<Donation />} />
           <Route path="/clock-in" element={<ClockIn />} />
-          <Route path="/enclosure-entry" element={<AddEnclosureForm />} />
+          <Route path="/veterinarian-record" element={<VeterinarianRecord />} />
+          <Route path="/diet-entry" element={<DietForm />} />
+          <Route path="/add-enclosure-form" element={<AddEnclosureForm />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/add-animal" element={<AddAnimal />} />
+          <Route path="/add-security-form" element={<AddSecurityForm />} />
+
+
         </Routes>
       </div>
       

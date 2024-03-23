@@ -1,114 +1,112 @@
 import React, { useState } from 'react';
-import './AddEnclosureForm.css'; // Import CSS file for styling
+import './AddEnclosureForm.css';
 
-const AddEnclosureForm = () => {
-  const [enclosureInfo, setEnclosureInfo] = useState({
-    enclosureId: '',
-    name: '',
-    enclosureType: '',
-    buildDate: '',
-    address: '',
-    cleaningStartTime: '',
-    cleaningEndTime: ''
-  });
+const AddEnclosureForm = ({ onAddEnclosure }) => {
+  const [name, setName] = useState('');
+  const [enclosure_type, setType] = useState('');
+  const [build_date, setBuildDate] = useState('');
+  const [cleaning_start, setCleaningStart] = useState('');
+  const [cleaning_end, setCleaningEnd] = useState('');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setEnclosureInfo(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
+  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can send the enclosureInfo to the backend
-    console.log('Enclosure info submitted:', enclosureInfo);
-    // Reset form after submission
-    setEnclosureInfo({
-      enclosureId: '',
-      name: '',
-      enclosureType: '',
-      buildDate: '',
-      address: '',
-      cleaningStartTime: '',
-      cleaningEndTime: ''
-    });
+    if (!name || !enclosure_type || !build_date || !cleaning_start || !cleaning_end) {
+      alert('Please fill in all fields');
+      return;
+    }
+
+    // Store the form data in variables
+    const enclosureData = {
+      name,
+      enclosure_type,
+      build_date,
+      cleaning_start,
+      cleaning_end
+    };
+
+    // Backend logic should be done here to handle storing the data.
+    // You can pass the enclosureData to any function or API call for further processing.
+
+    // Logging variables
+    console.log('Name:', name);
+    console.log('Enclosure Type:', enclosure_type);
+    console.log('Build Date:', build_date);
+    console.log('Cleaning Start Time:', cleaning_start);
+    console.log('Cleaning End Time:', cleaning_end);
+
+    // Call the function passed from parent component to add enclosure
+    // Reset form fields after submission
+    handleReset();
   };
 
+  // Function to reset form fields
+  const handleReset = () => {
+    setName('');
+    setType('');
+    setBuildDate('');
+    setCleaningStart('');
+    setCleaningEnd('');
+  };
+  
   return (
     <form onSubmit={handleSubmit} className="enclosure-form">
-      <label>
-        Enclosure ID:
+      <div className="form-group">
+        <label htmlFor="name">Name:</label>
         <input
           type="text"
-          name="enclosureId"
-          value={enclosureInfo.enclosureId}
-          onChange={handleChange}
+          id="name"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
         />
-      </label>
-      <br />
-      <label>
-        Name:
+      </div>
+      <div className="form-group">
+        <label htmlFor="enclosure_type">Enclosure Type:</label>
         <input
           type="text"
-          name="name"
-          value={enclosureInfo.name}
-          onChange={handleChange}
+          id="enclosure_type"
+          placeholder="Enclosure Type"
+          value={enclosure_type}
+          onChange={(e) => setType(e.target.value)}
+          required
         />
-      </label>
-      <br />
-      <label>
-        Enclosure Type:
+      </div>
+      <div className="form-group">
+        <label htmlFor="build_date">Build Date:</label>
         <input
-          type="text"
-          name="enclosureType"
-          value={enclosureInfo.enclosureType}
-          onChange={handleChange}
+          type="date"
+          id="build_date"
+          value={build_date}
+          onChange={(e) => setBuildDate(e.target.value)}
+          required
         />
-      </label>
-      <br />
-      <label>
-        Build Date:
+      </div>
+      <div className="form-group">
+        <label htmlFor="cleaning_start">Cleaning Start Time:</label>
         <input
-          type="text"
-          name="buildDate"
-          value={enclosureInfo.buildDate}
-          onChange={handleChange}
+          type="time"
+          id="cleaning_start"
+          value={cleaning_start}
+          onChange={(e) => setCleaningStart(e.target.value)}
+          required
         />
-      </label>
-      <br />
-      <label>
-        Address:
+      </div>
+      <div className="form-group">
+        <label htmlFor="cleaning_end">Cleaning End Time:</label>
         <input
-          type="text"
-          name="address"
-          value={enclosureInfo.address}
-          onChange={handleChange}
+          type="time"
+          id="cleaning_end"
+          value={cleaning_end}
+          onChange={(e) => setCleaningEnd(e.target.value)}
+          required
         />
-      </label>
-      <br />
-      <label>
-        Cleaning Start Time:
-        <input
-          type="text"
-          name="cleaningStartTime"
-          value={enclosureInfo.cleaningStartTime}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        Cleaning End Time:
-        <input
-          type="text"
-          name="cleaningEndTime"
-          value={enclosureInfo.cleaningEndTime}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <button type="submit">Submit</button>
+      </div>
+      <div className="form-actions">
+        <button type="submit">Add Enclosure</button>
+        <button type="button" onClick={handleReset}>Reset</button>
+      </div>
     </form>
   );
 };

@@ -1,14 +1,17 @@
-// Home.js
-import React from 'react';
-import './Home.css'; // Import Home.css for styling
-
-function Home() {
+import React from "react";
+import videoBackground from "../Videos/ZooVid2.mp4"; // Import your video file
+import "./Home.css"
+const Home = () => {
   return (
-    <div className="home-container">
-      {/* Add other content as needed */}
-      <h1>Home</h1>
+    <div className="video-background">
+      <video autoPlay loop muted>
+        <source src={videoBackground} type="video/mp4" />
+      </video>
+      <div className="content">
+        {/* Your other content here */}
+      </div>
     </div>
   );
-}
+};
 
 export default Home;

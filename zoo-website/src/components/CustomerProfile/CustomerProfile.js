@@ -5,7 +5,6 @@ import './CustomerProfile.css';
 function CustomerProfile() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [address, setAddress] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [email, setEmail] = useState('');
 
@@ -15,10 +14,6 @@ function CustomerProfile() {
 
   const handleLastNameChange = (event) => {
     setLastName(event.target.value);
-  };
-
-  const handleAddressChange = (event) => {
-    setAddress(event.target.value);
   };
 
   const handlePhoneNumberChange = (event) => {
@@ -33,7 +28,6 @@ function CustomerProfile() {
     event.preventDefault();
     console.log('First Name:', firstName);
     console.log('Last Name:', lastName);
-    console.log('Address:', address);
     console.log('Phone Number:', phoneNumber);
     console.log('Email:', email);
     // Add logic to save or submit the form data
@@ -58,14 +52,6 @@ function CustomerProfile() {
             type="text"
             value={lastName}
             onChange={handleLastNameChange}
-          />
-        </label>
-        <label>
-          Address:
-          <input
-            type="text"
-            value={address}
-            onChange={handleAddressChange}
           />
         </label>
         <label>

@@ -12,21 +12,22 @@ export default function EmployeeNavbar() {
       </Link>
       <ul>
         <CustomLink
-          to="/animals"
+          to="/add-animal"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           Animals
           {isHovered && (
             <div className="sub-menu">
-              <CustomLink to="/veterinarian-records">Veterinarian Records</CustomLink>
-              <CustomLink to="/diets">Diets</CustomLink>
+              <CustomLink to="/veterinarian-record">Veterinarian Records</CustomLink>
+              <CustomLink to="/diet-entry">Diets</CustomLink>
             </div>
           )}
         </CustomLink>
         <CustomLink to="/clock-in">Clock In</CustomLink>
-        <CustomLink to="/enclosure-entry">Enclosure Entry</CustomLink>
-        <CustomLink to="/about-us">About us</CustomLink>
+        <CustomLink to="/add-enclosure-form">Enclosure Entry</CustomLink>
+        <CustomLink to="/orders">Orders</CustomLink>
+        <CustomLink to="/add-security-form">Security</CustomLink>
         <CustomLink to="/sign-in">Sign out</CustomLink>
       </ul>
     </nav>
