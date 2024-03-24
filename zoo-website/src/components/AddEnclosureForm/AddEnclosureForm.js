@@ -16,6 +16,13 @@ const AddEnclosureForm = ({ onAddEnclosure }) => {
       return;
     }
 
+    // Check if the build date is after the present date
+    const currentDate = new Date().toISOString().split('T')[0]; // Get current date in 'yyyy-mm-dd' format
+    if (build_date > currentDate) {
+      alert('Build date cannot be after the present date');
+      return;
+    }
+
     // Store the form data in variables
     const enclosureData = {
       name,

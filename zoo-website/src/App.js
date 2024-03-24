@@ -4,7 +4,6 @@ import Home from "./components/Home/Home"
 import AboutUs from "./components/AboutUs/AboutUs"
 import SignUp from "./components/SignUp/SignUp"
 import CustomerProfile from "./components/CustomerProfile/CustomerProfile"
-import DataEntryForm from "./components/DataEntryForm/DataEntryForm"
 import EmployeeProfile from "./components/EmployeeProfile/EmployeeProfile"
 import TicketBuy from "./components/TicketBuy/TicketBuy"
 import TicketView from "./components/TicketView/TicketView"
@@ -19,6 +18,10 @@ import VeterinarianRecord from "./components/VeterinarianRecord/VeterinarianReco
 import Orders from "./components/Orders/Orders"
 import AddAnimal from "./components/AddAnimal/AddAnimal"
 import AddSecurityForm from "./components/AddSecurityForm/AddSecurityForm"
+import SecurityReport from "./components/SecurityReport/SecurityReport"
+import EnclosureReport from "./components/EnclosureReport/EnclosureReport"
+import AnimalReport from "./components/AnimalReport/AnimalReport"
+import BusinessReport from "./components/BusinessReport/BusinessReport"
 import './App.css'; 
 import { Route, Routes } from "react-router-dom"
 
@@ -27,7 +30,7 @@ function App() {
     <> 
     
       
-      <EmployeeNavbar />
+      <CustomerNavbar />
       <div className="container">
         <Routes>
           <Route path="/about-us" element={<AboutUs />} /> 
@@ -35,7 +38,6 @@ function App() {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/customer-profile" element={<CustomerProfile/>} />
           <Route path="/employee-profile" element={<EmployeeProfile />} />
-          <Route path="/data-entry" element={<EmployeeProfile />} />
           <Route path="/ticket-buy" element={<TicketBuy />} />
           <Route path="/ticket-view" element={<TicketView />} />
           <Route path="/donation" element={<Donation />} />
@@ -46,8 +48,10 @@ function App() {
           <Route path="/orders" element={<Orders />} />
           <Route path="/add-animal" element={<AddAnimal />} />
           <Route path="/add-security-form" element={<AddSecurityForm />} />
-
-
+          <Route path="/security-report" element={<SecurityReport />} />
+          <Route path="/enclosure-report" element={<EnclosureReport />} />
+          <Route path ="/animal-report" element={<AnimalReport />} />
+          <Route path ="/business-report" element={<BusinessReport />} />
         </Routes>
       </div>
       

@@ -19,12 +19,13 @@ export default function ManagerNavbar() {
           Zoo Reports
           {isHovered && (
             <div className="sub-menu">
-              <CustomLink to="/enclosure-reports">Enclosure Reports</CustomLink>
-              <CustomLink to="/animal-reports">Animal Reports</CustomLink>
+              <CustomLink to="/enclosure-report">Enclosure Reports</CustomLink>
+              <CustomLink to="/animal-report">Animal Reports</CustomLink>
+              <CustomLink to="/security-report">Security Reports</CustomLink>
             </div>
           )}
         </CustomLink>
-        <CustomLink to="/business-reports">Business Reports</CustomLink>
+        <CustomLink to="/business-report">Business Reports</CustomLink>
         <CustomLink to="/about-us">About us</CustomLink>
         <CustomLink to="/sign-in">Sign Out</CustomLink>
       </ul>

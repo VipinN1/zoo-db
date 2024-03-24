@@ -10,6 +10,14 @@ function AddSecurityForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    
+    // Check if the selected date is after the present date
+    const currentDate = new Date().toISOString().split('T')[0]; // Get current date in 'yyyy-mm-dd' format
+    if (date > currentDate) {
+      alert('Date cannot be after the present date');
+      return;
+    }
+
     console.log('Date:', date);
     console.log('Time:', formatTime(time)); // Format time before logging
     console.log('Event Description:', eventDescription);
