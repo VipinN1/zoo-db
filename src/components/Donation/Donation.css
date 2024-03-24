@@ -9,20 +9,6 @@ body {
   position: relative;
 }
 
-.Header {
-  background-color: #FFB74D; /* Slightly darker orange */
-  padding: 5px;
-  position: absolute;
-  top: 0;
-  left: 0; /* Stretch to the left */
-  right: 0; /* Stretch to the right */
-  border-bottom-left-radius: 50px; /* Add curved edges to the top left corner */
-  border-bottom-right-radius: 50px;
-  text-align: center;
-}
-
-
-
 .Footer {
   background-color: #FFB74D; /* Slightly darker orange */
   padding: 20px;

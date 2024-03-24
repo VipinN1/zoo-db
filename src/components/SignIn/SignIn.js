@@ -1,14 +1,14 @@
 // SignIn.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import './SignIn.css'; // Import SignIn.css for styling
+import { Link } from 'react-router-dom';
+import './SignIn.css';
 
-function SignIn() {
-  const [username, setUsername] = useState('');
+function SignIn({ handleSignIn }) {
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
   };
 
   const handlePasswordChange = (event) => {
@@ -17,11 +17,8 @@ function SignIn() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Add your sign-in logic here
-    console.log('Username:', username);
-    console.log('Password:', password);
-    // Reset the form fields after submission
-    setUsername('');
+    handleSignIn(email, password); // Call the function passed from App.js
+    setEmail('');
     setPassword('');
   };
 
@@ -31,9 +28,9 @@ function SignIn() {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Username"
-          value={username}
-          onChange={handleUsernameChange}
+          placeholder="Email"
+          value={email}
+          onChange={handleEmailChange}
           className="input-field"
         />
         <input
@@ -43,10 +40,14 @@ function SignIn() {
           onChange={handlePasswordChange}
           className="input-field"
         />
-        <button type="submit" className="submit-button">Sign In</button>
+        <button type="submit" className="submit-button">
+          Sign In
+        </button>
       </form>
       <div className="signup-link">
-        <p>Not already a user? <Link to="/sign-up">Sign up</Link></p>
+        <p>
+          Not already a user? <Link to="/sign-up">Sign up</Link>
+        </p>
       </div>
     </div>
   );
