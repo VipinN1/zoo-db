@@ -20,6 +20,8 @@ function SignIn({ handleSignIn }) {
     handleSignIn(email, password); // Call the function passed from App.js
     setEmail('');
     setPassword('');
+    
+    
   };
 
   return (

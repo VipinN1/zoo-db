@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "./CustomerNavbar.css";
 
-export default function ManagerNavbar() {
+export default function ManagerNavbar({handleSignOut}) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -27,7 +27,9 @@ export default function ManagerNavbar() {
         </CustomLink>
         <CustomLink to="/business-report">Business Reports</CustomLink>
         <CustomLink to="/about-us">About us</CustomLink>
-        <CustomLink to="/sign-in">Sign Out</CustomLink>
+        <li>
+        <button onClick={handleSignOut}>Sign out</button>
+        </li>
       </ul>
     </nav>
   );

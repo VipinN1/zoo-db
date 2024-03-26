@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "./CustomerNavbar.css";
 
-export default function CustomerNavbar() {
+export default function CustomerNavbar({ handleSignOut }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -26,7 +26,9 @@ export default function CustomerNavbar() {
         </CustomLink>
         <CustomLink to="/donation">Donate</CustomLink>
         <CustomLink to="/about-us">About us</CustomLink>
-        <CustomLink to="/sign-in">Sign out</CustomLink>
+        <li>
+        <button onClick={handleSignOut}>Sign out</button>
+        </li>
 
       </ul>
     </nav>

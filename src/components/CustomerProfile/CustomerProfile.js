@@ -1,4 +1,5 @@
 // CustomerProfile.js
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import './CustomerProfile.css';
 
@@ -7,6 +8,7 @@ function CustomerProfile() {
   const [lastName, setLastName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [email, setEmail] = useState('');
+  const navigate = useNavigate();
 
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
@@ -31,6 +33,13 @@ function CustomerProfile() {
     console.log('Phone Number:', phoneNumber);
     console.log('Email:', email);
     // Add logic to save or submit the form data
+    if(firstName && lastName && phoneNumber && email){
+      navigate('/sign-in')
+    }
+    else{
+      alert("fill in all fields")
+    }
+    
     
   };
 
