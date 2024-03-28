@@ -68,5 +68,5 @@ jobs:
         with:
           app-name: 'zoodbweb'
           slot-name: 'Production'
-          package: node-app.zip
+          package: .
           
