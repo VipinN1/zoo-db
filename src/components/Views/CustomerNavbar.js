@@ -6,8 +6,8 @@ export default function CustomerNavbar({ handleSignOut }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <nav className="nav">
-      <Link to="/" className="site-title">
+    <nav className="nav-customer">
+      <Link to="/" className="site-title-customer">
         Zoo
       </Link>
       <ul>
@@ -18,16 +18,16 @@ export default function CustomerNavbar({ handleSignOut }) {
         >
           Tickets
           {isHovered && (
-            <div className="sub-menu">
+            <div className="sub-menu-customer">
               <CustomLink to="/ticket-view">View Tickets</CustomLink>
               <CustomLink to="/ticket-buy">Buy Tickets</CustomLink>
             </div>
           )}
         </CustomLink>
         <CustomLink to="/donation">Donate</CustomLink>
-        <CustomLink to="/about-us">About us</CustomLink>
-        <li>
-        <button onClick={handleSignOut}>Sign out</button>
+        <CustomLink to="/about-us">About Us</CustomLink>
+        <li className="nav-item">
+        <button onClick={handleSignOut}>Sign Out</button>
         </li>
 
       </ul>

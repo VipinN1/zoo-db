@@ -6,19 +6,17 @@ body {
   margin: 0;
 }
 
-.container {
-  margin: 1rem;
-  text-align: center;
-}
 
 .nav {
-  background-color: #f17e40;
-  color: white;
+  background-color: #062925;
+  color: darkcyan;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
+  border-bottom-left-radius: 12px; /* Add curved edges to the top left corner */
+  border-bottom-right-radius: 12px;
 }
 
 .site-title {
@@ -31,6 +29,7 @@ body {
   list-style: none;
   display: flex;
   gap: 1rem;
+  font-size: 25px;
 }
 
 .nav a {
@@ -43,9 +42,9 @@ body {
 }
 
 .nav li.active {
-  background-color: #555;
+  background-color: #004445;
 }
 
 .nav li:hover {
-  background-color: #777;
+  background-color: #004445;
 }

@@ -41,7 +41,7 @@ function AddSecurityForm() {
     <div className="add-security-form-container">
       <h2>Add Security Event</h2>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
+        <div className="form-group-security-form">
           <label htmlFor="date">Date:</label>
           <input
             type="date"
@@ -49,9 +49,10 @@ function AddSecurityForm() {
             value={date}
             onChange={(e) => setDate(e.target.value)}
             required
+            className="input-field-security-form" // Add the new class name here
           />
         </div>
-        <div className="form-group">
+        <div className="form-group-security-form">
           <label htmlFor="time">Time:</label>
           <input
             type="time"
@@ -59,18 +60,20 @@ function AddSecurityForm() {
             value={time}
             onChange={handleTimeChange}
             required
+            className="input-field-security-form" // Add the new class name here
           />
         </div>
-        <div className="form-group">
+        <div className="form-group-security-form">
           <label htmlFor="eventDescription">Event Description:</label>
           <textarea
             id="eventDescription"
             value={eventDescription}
             onChange={(e) => setEventDescription(e.target.value)}
             required
+            className="input-field-security-form" // Add the new class name here
           />
         </div>
-        <div className="form-group">
+        <div className="form-group-security-form">
           <label htmlFor="location">Location:</label>
           <input
             type="text"
@@ -78,21 +81,23 @@ function AddSecurityForm() {
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             required
+            className="input-field-security-form" // Add the new class name here
           />
         </div>
-        <div className="form-group">
+        <div className="form-group-security-form">
           <label htmlFor="severityLevel">Severity Level:</label>
           <select
             id="severityLevel"
             value={severityLevel}
             onChange={(e) => setSeverityLevel(e.target.value)}
+            className="input-field-security-form" // Add the new class name here
           >
             <option value="low">Low</option>
             <option value="medium">Medium</option>
             <option value="high">High</option>
           </select>
         </div>
-        <button type="submit-security-form">Submit</button>
+        <button className="security-button" type="submit-security-form">Submit</button>
       </form>
     </div>
   );

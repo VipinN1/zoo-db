@@ -20,15 +20,10 @@ function Donation(){
   };
 
   return (
-    <div className="App">
-      <header className="Header">
-        <h1>Donate to Our Zoo</h1>
+    <div className="App-donation">
+      <header className="Header-donation">
       </header>
-      <main className="Main">
-        <p>
-          Thank you for considering donating to our zoo! Your donations help us provide the best care for our animals
-          and maintain our facilities. Thank you for your support!
-        </p>
+      <main className="Main-donation">
         <p>
           To make a donation, please fill out the form below:
         </p>
@@ -42,7 +37,7 @@ function Donation(){
           <button type="submit">Donate</button>
         </form>
       </main>
-      <footer className="Footer">
+      <footer className="Footer-donation">
         <p>Thank you for supporting our zoo!</p>
       </footer>
     </div>

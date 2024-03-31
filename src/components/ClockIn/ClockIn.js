@@ -53,7 +53,7 @@ function ClockIn() {
 
   return (
     <div className='clock-in'>
-      <h1>Employee Clock In/Out</h1>
+      <h1 className='h1-clock=in'>Employee Clock In/Out</h1>
       <br></br>
       <div>
         <button onClick={handleClockIn}>Clock In</button>

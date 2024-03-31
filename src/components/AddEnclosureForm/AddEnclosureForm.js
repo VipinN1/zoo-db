@@ -58,7 +58,7 @@ const AddEnclosureForm = ({ onAddEnclosure }) => {
   
   return (
     <form onSubmit={handleSubmit} className="enclosure-form">
-      <div className="form-group">
+      <div className="form-group-enclosure">
         <label htmlFor="name">Name:</label>
         <input
           type="text"
@@ -69,7 +69,7 @@ const AddEnclosureForm = ({ onAddEnclosure }) => {
           required
         />
       </div>
-      <div className="form-group">
+      <div className="form-group-enclosure">
         <label htmlFor="enclosure_type">Enclosure Type:</label>
         <input
           type="text"
@@ -80,7 +80,7 @@ const AddEnclosureForm = ({ onAddEnclosure }) => {
           required
         />
       </div>
-      <div className="form-group">
+      <div className="form-group-enclosure">
         <label htmlFor="build_date">Build Date:</label>
         <input
           type="date"
@@ -90,7 +90,7 @@ const AddEnclosureForm = ({ onAddEnclosure }) => {
           required
         />
       </div>
-      <div className="form-group">
+      <div className="form-group-enclosure">
         <label htmlFor="cleaning_start">Cleaning Start Time:</label>
         <input
           type="time"
@@ -100,7 +100,7 @@ const AddEnclosureForm = ({ onAddEnclosure }) => {
           required
         />
       </div>
-      <div className="form-group">
+      <div className="form-group-enclosure">
         <label htmlFor="cleaning_end">Cleaning End Time:</label>
         <input
           type="time"
@@ -110,7 +110,7 @@ const AddEnclosureForm = ({ onAddEnclosure }) => {
           required
         />
       </div>
-      <div className="form-actions">
+      <div className="form-actions-enclosure">
         <button type="submit">Add Enclosure</button>
         <button type="button" onClick={handleReset}>Reset</button>
       </div>

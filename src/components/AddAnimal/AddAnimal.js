@@ -37,7 +37,7 @@ function AddAnimal() {
     <div className="add-animal-container">
       <h2>Add Animal</h2>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
+        <div className="form-group-animal">
           <label htmlFor="animalName">Animal Name:</label>
           <input
             type="text"
@@ -47,7 +47,7 @@ function AddAnimal() {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="form-group-animal">
           <label htmlFor="animalSpecies">Animal Species:</label>
           <input
             type="text"
@@ -57,7 +57,7 @@ function AddAnimal() {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="form-group-animal">
           <label htmlFor="animalGender">Animal Gender:</label>
           <input
             type="text"
@@ -67,7 +67,7 @@ function AddAnimal() {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="form-group-animal">
           <label htmlFor="animalDoB">Animal DoB:</label>
           <input
             type="date"
@@ -77,7 +77,7 @@ function AddAnimal() {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="form-group-animal">
           <label htmlFor="animalEndangered">Is Animal Endangered?</label>
           <select
             id="animalEndangered"
@@ -89,7 +89,7 @@ function AddAnimal() {
             <option value="Yes">Yes</option>
           </select>
         </div>
-        <div className="form-group">
+        <div className="form-group-animal">
           <label htmlFor="animalOrigin">Animal Origin:</label>
           <input
             type="text"
@@ -99,7 +99,7 @@ function AddAnimal() {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="form-group-animal">
           <label htmlFor="animalLifeStage">Animal Life Stage:</label>
           <input
             type="text"

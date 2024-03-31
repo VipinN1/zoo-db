@@ -2,8 +2,11 @@
   max-width: 400px;
   margin: auto;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #1f6f78;
   border-radius: 5px;
+  background-color: #1f6f78;
+  margin-top: 50px;
+  border-radius: 20px;
 }
 
 .security-report-title {
@@ -34,7 +37,7 @@
 .security-button {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #004445;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -42,7 +45,7 @@
 }
 
 .security-button:hover {
-  background-color: #0056b3;
+  background-color: #062925;
 }
 
 .security-error-message {

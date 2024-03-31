@@ -80,7 +80,6 @@ function App() {
       ) : (
         <NavbarTemp />
       )}
-
           <Routes>
           <Route path="/sign-in" element={<SignIn handleSignIn={handleSignIn} />} />
           <Route path="/about-us" element={<AboutUs />} />
@@ -101,7 +100,7 @@ function App() {
           <Route path="/enclosure-report" element={<EnclosureReport />} />
           <Route path="/animal-report" element={<AnimalReport />} />
           <Route path="/business-report" element={<BusinessReport />} />
-        </Routes>
+        </Routes> 
       </div>
     </>
   );

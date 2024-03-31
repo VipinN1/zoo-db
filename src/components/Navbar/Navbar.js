@@ -7,8 +7,8 @@ export default function Navbar() {
         Zoo
       </Link>
       <ul>
-        <CustomLink to="/about-us">About us</CustomLink>
-        <CustomLink to="/sign-in">Sign in</CustomLink>
+        <CustomLink to="/about-us">About Us</CustomLink>
+        <CustomLink to="/sign-in">Sign In</CustomLink>
       </ul>
     </nav>
   )
