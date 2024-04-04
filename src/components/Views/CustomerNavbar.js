@@ -12,7 +12,6 @@ export default function CustomerNavbar({ handleSignOut }) {
       </Link>
       <ul>
         <CustomLink
-          to="/tickets"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >

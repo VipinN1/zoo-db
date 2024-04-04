@@ -13,14 +13,16 @@ function AddAnimal() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+  
     // Get current date for Animal DoA
     const currentDate = new Date();
     const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1)
       .toString()
       .padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')}`;
-    setAnimalDoA(formattedDate);
-
+    
+    // Use functional form of setState to ensure you're working with the latest state value
+    setAnimalDoA(prevDoA => formattedDate);
+  
     console.log('Animal Name:', animalName);
     console.log('Animal Species:', animalSpecies);
     console.log('Animal Gender:', animalGender);
@@ -28,10 +30,11 @@ function AddAnimal() {
     console.log('Is Animal Endangered:', animalEndangered);
     console.log('Animal Origin:', animalOrigin);
     console.log('Animal Life Stage:', animalLifeStage);
-    console.log('Animal DoA:', animalDoA);
-
+    console.log('Animal DoA:', formattedDate);
+  
     // Implement backend logic here to send the data inputs to the backend
   };
+  
 
   return (
     <div className="add-animal-container">

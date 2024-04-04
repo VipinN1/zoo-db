@@ -50,8 +50,6 @@ body {
   align-items: stretch;
   gap: 2rem;
   padding: 0 1.5rem;
-  border-bottom-left-radius: 12px; /* Add curved edges to the top left corner */
-  border-bottom-right-radius: 12px;
   
 }
 
@@ -76,8 +74,8 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: .5rem;
+  
   
 }
 
