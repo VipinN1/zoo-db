@@ -6,19 +6,17 @@ body {
   margin: 0;
 }
 
-.container {
-  margin: 1rem;
-  text-align: center;
-}
 
 .nav {
-  background-color: #f17e40;
-  color: white;
+  background-color: #062925;
+  color: darkcyan;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
+
+
 }
 
 .site-title {
@@ -31,6 +29,8 @@ body {
   list-style: none;
   display: flex;
   gap: 1rem;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .nav a {
@@ -39,13 +39,15 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: .25rem;
+  padding: .5rem;
 }
 
 .nav li.active {
-  background-color: #555;
+  background-color: #004445;
 }
 
 .nav li:hover {
-  background-color: #777;
+  background-color: #004445;
 }
+
+

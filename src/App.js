@@ -42,7 +42,7 @@ function App() {
     // Check email and password and set userRole accordingly
     if (email === 'customer@email.com' && password === 'customerpw') {
       setUserRole('customer');
-      navigate('/');
+      navigate('/home');
     } else if (email === 'employee@email.com' && password === 'employeepw') {
       setUserRole('employee');
       navigate('/');
@@ -80,7 +80,6 @@ function App() {
       ) : (
         <NavbarTemp />
       )}
-
           <Routes>
           <Route path="/sign-in" element={<SignIn handleSignIn={handleSignIn} />} />
           <Route path="/about-us" element={<AboutUs />} />
@@ -101,7 +100,8 @@ function App() {
           <Route path="/enclosure-report" element={<EnclosureReport />} />
           <Route path="/animal-report" element={<AnimalReport />} />
           <Route path="/business-report" element={<BusinessReport />} />
-        </Routes>
+          <Route path ="/" element={<Home/>}/>
+        </Routes> 
       </div>
     </>
   );

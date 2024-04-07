@@ -37,30 +37,30 @@ function SignUp() {
 
   return (
     <div className="signup-container">
-      <h2>Sign Up</h2>
+      <h2 className="h2-sign-up">Sign Up</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Email"
           value={email}
           onChange={handleEmailChange}
-          className="input-field"
+          className="input-field-sign-up"
         />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={handlePasswordChange}
-          className="input-field"
+          className="input-field-sign-up"
         />
-        <button type="submit" className="submit-button">Sign Up</button>
+        <button type="submit" className="submit-button-sign-up">Sign Up</button>
       </form>
       {/* <div><Link to="/customer-profile">Customer Profile</Link></div> //Made for testing the different pages
       <div><Link to="/employee-profile">Employee Profile</Link></div>
       <div><Link to="/ticket-buy">Ticket Buy</Link></div>
       <div><Link to="/ticket-view">Ticket View</Link></div>
       <div><Link to="/donation">Donation</Link></div> */}
-      <div className="signin-link">
+      <div className="signin-link-sign-up">
         <p>Already have an account? <Link to="/sign-in">Sign in</Link></p>
       </div>
     </div>

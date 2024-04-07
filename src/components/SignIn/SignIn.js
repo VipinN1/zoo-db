@@ -26,27 +26,27 @@ function SignIn({ handleSignIn }) {
 
   return (
     <div className="signin-container">
-      <h2>Sign In</h2>
+      <h2 className='h2-sign-in'>Sign In</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Email"
           value={email}
           onChange={handleEmailChange}
-          className="input-field"
+          className="input-field-sign-in"
         />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={handlePasswordChange}
-          className="input-field"
+          className="input-field-sign-in"
         />
-        <button type="submit" className="submit-button">
+        <button type="submit" className="submit-button-sign-in">
           Sign In
         </button>
       </form>
-      <div className="signup-link">
+      <div className="signup-link-sign-in">
         <p>
           Not already a user? <Link to="/sign-up">Sign up</Link>
         </p>

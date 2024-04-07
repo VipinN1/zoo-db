@@ -37,25 +37,27 @@ function DietForm() {
     <div className="diet-form-container">
       <h2>Diet Form</h2>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="dietName">Diet Name:</label>
+        <div className="form-group-diet-form">
+          <label className='label-diet-form' htmlFor="dietName">Diet Name:</label>
           <input
             type="text"
             id="dietName"
             value={dietName}
             onChange={(e) => setDietName(e.target.value)}
+            className="input-diet-form"
           />
         </div>
-        <div className="form-group">
+        <div className="form-group-diet-form">
           <label htmlFor="dietType">Diet Type:</label>
           <input
             type="text"
             id="dietType"
             value={dietType}
             onChange={(e) => setDietType(e.target.value)}
+            className="input-diet-form"
           />
         </div>
-        <div className="form-group">
+        <div className="form-group-diet-form">
           <label htmlFor="dietSchedule">Diet Schedule:</label>
           <input
             type="text"
@@ -63,15 +65,16 @@ function DietForm() {
             value={scheduleInput}
             onChange={handleScheduleInputChange}
             placeholder="Enter time in format HH:MM AM/PM"
+            className="input-diet-form"
           />
-          <button type="button" onClick={handleAddSchedule}>Add Time</button>
+          <button className='button-diet' type="button" onClick={handleAddSchedule}>Add Time</button>
         </div>
         <ul>
           {dietSchedule.map((time, index) => (
             <li key={index}>{time}</li>
           ))}
         </ul>
-        <button type="submit">Submit</button>
+        <button className='button-diet-2' type="submit">Submit</button>
       </form>
     </div>
   );

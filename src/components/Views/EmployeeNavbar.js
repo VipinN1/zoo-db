@@ -6,8 +6,8 @@ export default function EmployeeNavbar({handleSignOut}) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <nav className="nav">
-      <Link to="/" className="site-title">
+    <nav className="nav-customer">
+      <Link to="/" className="site-title-customer">
         Zoo
       </Link>
       <ul>
@@ -18,8 +18,8 @@ export default function EmployeeNavbar({handleSignOut}) {
         >
           Animals
           {isHovered && (
-            <div className="sub-menu">
-              <CustomLink to="/veterinarian-record">Veterinarian Records</CustomLink>
+            <div className="sub-menu-customer">
+              <CustomLink to="/veterinarian-record">Vet Records</CustomLink>
               <CustomLink to="/diet-entry">Diets</CustomLink>
             </div>
           )}
@@ -28,7 +28,7 @@ export default function EmployeeNavbar({handleSignOut}) {
         <CustomLink to="/add-enclosure-form">Enclosure Entry</CustomLink>
         <CustomLink to="/orders">Orders</CustomLink>
         <CustomLink to="/add-security-form">Security</CustomLink>
-        <li>
+        <li className="nav-item">
         <button onClick={handleSignOut}>Sign out</button>
         </li>
       </ul>

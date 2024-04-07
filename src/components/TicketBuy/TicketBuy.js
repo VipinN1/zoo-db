@@ -19,19 +19,23 @@ function TicketBuy() {
   const infantPrice = 5;
 
   const handleAdultChange = (event) => {
-    setAdultTickets(Number(event.target.value));
+    const value = Number(event.target.value);
+    setAdultTickets(value >= 0 ? value : 0);
   };
 
   const handleChildChange = (event) => {
-    setChildTickets(Number(event.target.value));
+    const value = Number(event.target.value);
+    setChildTickets(value >= 0 ? value : 0);
   };
 
   const handleSeniorChange = (event) => {
-    setSeniorTickets(Number(event.target.value));
+    const value = Number(event.target.value);
+    setSeniorTickets(value >= 0 ? value : 0);
   };
 
   const handleInfantChange = (event) => {
-    setInfantTickets(Number(event.target.value));
+    const value = Number(event.target.value);
+    setInfantTickets(value >= 0 ? value : 0);
   };
 
   const totalCost = (adultTickets * adultPrice) + (childTickets * childPrice) + (seniorTickets * seniorPrice) + (infantTickets * infantPrice);

@@ -5,7 +5,7 @@ function VeterinarianRecord() {
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
   const [medications, setMedications] = useState('');
-  const [diagnosis, setDiagnosis] = useState(''); // Changed from treatments to diagnosis
+  const [diagnosis, setDiagnosis] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,7 +20,7 @@ function VeterinarianRecord() {
     console.log('Weight:', weight);
     console.log('Height:', height);
     console.log('Medications:', medicationsArray);
-    console.log('Diagnosis:', diagnosis); // Logging diagnosis
+    console.log('Diagnosis:', diagnosis);
 
     setWeight('');
     setHeight('');
@@ -32,8 +32,8 @@ function VeterinarianRecord() {
     <div className="veterinarian-records-container">
       <h2>Veterinarian Records</h2>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="weight">Weight (lbs):</label>
+        <div className="form-group-vet">
+          <label className="label-vet" htmlFor="weight">Weight (lbs):</label>
           <input
             type="number"
             id="weight"
@@ -41,10 +41,11 @@ function VeterinarianRecord() {
             onChange={(e) => setWeight(Math.max(0, parseFloat(e.target.value)))}
             min="0"
             step="0.01"
+            className="input-vet"
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="height">Height (in):</label>
+        <div className="form-group-vet">
+          <label className="label-vet" htmlFor="height">Height (in):</label>
           <input
             type="number"
             id="height"
@@ -52,27 +53,30 @@ function VeterinarianRecord() {
             onChange={(e) => setHeight(Math.max(0, parseFloat(e.target.value)))}
             min="0"
             step="0.01"
+            className="input-vet"
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="medications">Medications:</label>
+        <div className="form-group-vet">
+          <label className="label-vet" htmlFor="medications">Medications:</label>
           <textarea
             id="medications"
             value={medications}
             onChange={(e) => setMedications(e.target.value)}
             placeholder="Enter medications separated by commas"
+            className="input-vet"
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="diagnosis">Diagnosis:</label> {/* Changed from treatments to diagnosis */}
+        <div className="form-group-vet">
+          <label className="label-vet" htmlFor="diagnosis">Diagnosis:</label>
           <textarea
             id="diagnosis"
             value={diagnosis}
             onChange={(e) => setDiagnosis(e.target.value)}
             placeholder="Enter diagnosis"
+            className="input-vet"
           />
         </div>
-        <button type="submit">Submit</button>
+        <button className="button-vet" type="submit">Submit</button>
       </form>
     </div>
   );

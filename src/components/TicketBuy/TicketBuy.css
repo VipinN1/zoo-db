@@ -2,10 +2,10 @@
 .ticket-buy-container {
   margin: 50px auto;
   padding: 20px;
-  width: 400px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  width: 475px;
+  background-color: #1f6f78;
+  border: 1px solid #2c786c;
+  border-radius: 15px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -27,6 +27,8 @@
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
+  display: flex;
+  
 }
 
 .ticket-buy-container div {
@@ -36,19 +38,22 @@
 
 .ticket-buy-container span {
   font-size: 12px;
+  margin-right: 30px;
 }
 
 .ticket-buy-container button {
   padding: 10px;
-  background-color: #FFA500;
+  background-color: #004445;
   color: #fff;
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
 
 .ticket-buy-container button:hover {
-  background-color: #FF8C00;
+  background-color: #062925;
 }
 
 

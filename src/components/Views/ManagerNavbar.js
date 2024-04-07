@@ -6,19 +6,18 @@ export default function ManagerNavbar({handleSignOut}) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <nav className="nav">
-      <Link to="/" className="site-title">
+    <nav className="nav-customer">
+      <Link to="/" className="site-title-customer">
         Zoo
       </Link>
       <ul>
         <CustomLink
-          to="/tickets"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           Zoo Reports
           {isHovered && (
-            <div className="sub-menu">
+            <div className="sub-menu-customer">
               <CustomLink to="/enclosure-report">Enclosure Reports</CustomLink>
               <CustomLink to="/animal-report">Animal Reports</CustomLink>
               <CustomLink to="/security-report">Security Reports</CustomLink>
@@ -27,7 +26,7 @@ export default function ManagerNavbar({handleSignOut}) {
         </CustomLink>
         <CustomLink to="/business-report">Business Reports</CustomLink>
         <CustomLink to="/about-us">About us</CustomLink>
-        <li>
+        <li className="nav-item">
         <button onClick={handleSignOut}>Sign out</button>
         </li>
       </ul>
