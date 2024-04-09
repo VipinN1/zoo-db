@@ -12,6 +12,17 @@ function AddAnimal() {
   const [animalLifeStage, setAnimalLifeStage] = useState('');
   const [animalDoA, setAnimalDoA] = useState('');
 
+  // Function to reset form fields
+  const handleReset = () => {
+    setAnimalName('');
+    setAnimalSpecies('');
+    setAnimalGender('');
+    setAnimalDoB('');
+    setAnimalEndangered('');
+    setAnimalOrigin('');
+    setAnimalLifeStage('');
+  };
+
   async function handleSubmit(event) {
     event.preventDefault();
 
@@ -44,6 +55,10 @@ function AddAnimal() {
       animalLifeStage: animalLifeStage,
       animalDoA: formattedDate
     };
+
+    // Call the function passed from parent component to add animal
+    // Reset form fields after submission
+    handleReset();
 
     try {
       const response = await axios.post('http://localhost:5095/api/ZooDb/NewAnimal', userData);
