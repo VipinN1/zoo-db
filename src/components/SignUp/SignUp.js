@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Link,useNavigate } from 'react-router-dom'; // Import Link from react-router-dom
 import './SignUp.css'; // Import SignUp.css for styling
+import axios from 'axios';
 
 function SignUp() {
   const [email, setEmail] = useState('');
@@ -32,7 +33,14 @@ function SignUp() {
     else{
       alert('enter both fields')
     }
-    
+    const data = {
+      email: email,
+      password: password,
+      userType: 'customer'
+    };
+
+    axios.post('http://localhost:5095/api/ZooDb/NewUser', data)
+      .then((res) =>{console.log(res); });
   };
 
   return (

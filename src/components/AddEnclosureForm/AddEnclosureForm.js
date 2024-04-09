@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './AddEnclosureForm.css';
+import axios from 'axios';
 
 const AddEnclosureForm = ({ onAddEnclosure }) => {
   const [name, setName] = useState('');
@@ -7,6 +8,15 @@ const AddEnclosureForm = ({ onAddEnclosure }) => {
   const [build_date, setBuildDate] = useState('');
   const [cleaning_start, setCleaningStart] = useState('');
   const [cleaning_end, setCleaningEnd] = useState('');
+
+  // Function to reset form fields
+  const handleReset = () => {
+    setName('');
+    setType('');
+    setBuildDate('');
+    setCleaningStart('');
+    setCleaningEnd('');
+  };
 
   // Function to handle form submission
   const handleSubmit = (e) => {
@@ -23,15 +33,6 @@ const AddEnclosureForm = ({ onAddEnclosure }) => {
       return;
     }
 
-    // Store the form data in variables
-    const enclosureData = {
-      name,
-      enclosure_type,
-      build_date,
-      cleaning_start,
-      cleaning_end
-    };
-
     // Backend logic should be done here to handle storing the data.
     // You can pass the enclosureData to any function or API call for further processing.
 
@@ -45,16 +46,26 @@ const AddEnclosureForm = ({ onAddEnclosure }) => {
     // Call the function passed from parent component to add enclosure
     // Reset form fields after submission
     handleReset();
+
+    // Store the form data in variables
+    const data = {
+      enclosureName: name,
+      enclosureType: enclosure_type,
+      builtDate: build_date,
+      cleaningScheduleStart: cleaning_start,
+      cleaningScheduleEnd: cleaning_end
+    };   
+    
+    axios.post('http://localhost:5095/api/ZooDb/NewEnclosure', data)
+    .then(res => {
+        console.log(res);
+    })
+    .catch(error => {
+        console.error('Error:', error.response.data);
+    });
+    
   };
 
-  // Function to reset form fields
-  const handleReset = () => {
-    setName('');
-    setType('');
-    setBuildDate('');
-    setCleaningStart('');
-    setCleaningEnd('');
-  };
   
   return (
     <form onSubmit={handleSubmit} className="enclosure-form">

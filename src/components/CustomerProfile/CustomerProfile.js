@@ -2,6 +2,7 @@
 import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import './CustomerProfile.css';
+import axios from 'axios';
 
 function CustomerProfile() {
   const [firstName, setFirstName] = useState('');
@@ -39,8 +40,14 @@ function CustomerProfile() {
     else{
       alert("fill in all fields")
     }
-    
-    
+    const data = {
+      firstName: firstName,
+      lastName: lastName,
+      phoneNumber: phoneNumber,
+      email: email
+    };
+    axios.post('http://localhost:5095/api/ZooDb/NewUserProfile', data)
+    .then((res) =>{console.log(res); });
   };
 
   return (

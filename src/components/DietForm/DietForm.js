@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './DietForm.css';
+import axios from 'axios';
 
 function DietForm() {
   const [dietName, setDietName] = useState('');
@@ -31,6 +32,14 @@ function DietForm() {
     } else {
       alert('Please enter a valid time in format HH:MM AM/PM');
     }
+    const data = {
+      dietName: dietName,
+      dietType: dietType,
+      dietSchedule: dietSchedule
+    };
+
+    axios.post('http://localhost:5095/api/ZooDb/NewDiet', data)
+      .then((res) =>{console.log(res); });
   };
 
   return (

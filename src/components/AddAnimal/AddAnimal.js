@@ -1,28 +1,29 @@
 import React, { useState } from 'react';
 import './AddAnimal.css';
+import axios from 'axios';
 
 function AddAnimal() {
   const [animalName, setAnimalName] = useState('');
   const [animalSpecies, setAnimalSpecies] = useState('');
   const [animalGender, setAnimalGender] = useState('');
   const [animalDoB, setAnimalDoB] = useState('');
-  const [animalEndangered, setAnimalEndangered] = useState('No');
+  const [animalEndangered, setAnimalEndangered] = useState(false); // Use boolean state
   const [animalOrigin, setAnimalOrigin] = useState('');
   const [animalLifeStage, setAnimalLifeStage] = useState('');
   const [animalDoA, setAnimalDoA] = useState('');
 
-  const handleSubmit = (event) => {
+  async function handleSubmit(event) {
     event.preventDefault();
-  
+
     // Get current date for Animal DoA
     const currentDate = new Date();
     const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1)
       .toString()
       .padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')}`;
-    
+
     // Use functional form of setState to ensure you're working with the latest state value
     setAnimalDoA(prevDoA => formattedDate);
-  
+
     console.log('Animal Name:', animalName);
     console.log('Animal Species:', animalSpecies);
     console.log('Animal Gender:', animalGender);
@@ -31,10 +32,35 @@ function AddAnimal() {
     console.log('Animal Origin:', animalOrigin);
     console.log('Animal Life Stage:', animalLifeStage);
     console.log('Animal DoA:', formattedDate);
-  
+
     // Implement backend logic here to send the data inputs to the backend
+    const userData = {
+      animalName: animalName,
+      animalSpecies: animalSpecies,
+      animalGender: animalGender,
+      animalDoB: animalDoB,
+      animalEndangered: animalEndangered,
+      animalOrigin: animalOrigin,
+      animalLifeStage: animalLifeStage,
+      animalDoA: formattedDate
+    };
+
+    try {
+      const response = await axios.post('http://localhost:5095/api/ZooDb/NewAnimal', userData);
+      console.log('Response:', response);
+      // Handle success scenario
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        // The error is specifically an AxiosError
+        console.error('Error data:', error.response?.data);
+        console.error('Error status:', error.response?.status);
+        console.error('Error headers:', error.response?.headers);
+      } else {
+        // The error is not an AxiosError (could be a network error, etc.)
+        console.error('Non-Axios error:', error);
+      }
+    }
   };
-  
 
   return (
     <div className="add-animal-container">
@@ -84,8 +110,8 @@ function AddAnimal() {
           <label htmlFor="animalEndangered">Is Animal Endangered?</label>
           <select
             id="animalEndangered"
-            value={animalEndangered}
-            onChange={(e) => setAnimalEndangered(e.target.value)}
+            value={animalEndangered ? "Yes" : "No"} // Map boolean value to dropdown option
+            onChange={(e) => setAnimalEndangered(e.target.value === "Yes")} // Map dropdown option to boolean value
             required
           >
             <option value="No">No</option>

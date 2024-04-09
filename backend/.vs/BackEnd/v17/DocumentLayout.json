@@ -1,0 +1,171 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|c:\\users\\arvee\\desktop\\etc\\project\\backend\\backend\\controllers\\zoodbcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|solutionrelative:backend\\controllers\\zoodbcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|c:\\users\\arvee\\desktop\\etc\\project\\backend\\backend\\models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|solutionrelative:backend\\models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|c:\\users\\arvee\\desktop\\etc\\project\\backend\\backend\\models\\enclosure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|solutionrelative:backend\\models\\enclosure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|c:\\users\\arvee\\desktop\\etc\\project\\backend\\backend\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|solutionrelative:backend\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|c:\\users\\arvee\\desktop\\etc\\project\\backend\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|c:\\users\\arvee\\desktop\\etc\\project\\backend\\backend\\models\\vetrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|solutionrelative:backend\\models\\vetrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|c:\\users\\arvee\\desktop\\etc\\project\\backend\\backend\\models\\diet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|solutionrelative:backend\\models\\diet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|c:\\users\\arvee\\desktop\\etc\\project\\backend\\backend\\models\\userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|solutionrelative:backend\\models\\userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|c:\\users\\arvee\\desktop\\etc\\project\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BA6D74-2E95-42FB-9451-3A3DB23E7E5E}|BackEnd\\BackEnd.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Enclosure.cs",
+              "DocumentMoniker": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Models\\Enclosure.cs",
+              "RelativeDocumentMoniker": "BackEnd\\Models\\Enclosure.cs",
+              "ToolTip": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Models\\Enclosure.cs",
+              "RelativeToolTip": "BackEnd\\Models\\Enclosure.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T02:15:22.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VetRecords.cs",
+              "DocumentMoniker": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Models\\VetRecords.cs",
+              "RelativeDocumentMoniker": "BackEnd\\Models\\VetRecords.cs",
+              "ToolTip": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Models\\VetRecords.cs",
+              "RelativeToolTip": "BackEnd\\Models\\VetRecords.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T23:54:29.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Diet.cs",
+              "DocumentMoniker": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Models\\Diet.cs",
+              "RelativeDocumentMoniker": "BackEnd\\Models\\Diet.cs",
+              "ToolTip": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Models\\Diet.cs",
+              "RelativeToolTip": "BackEnd\\Models\\Diet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T23:19:09.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ZooDbController.cs",
+              "DocumentMoniker": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Controllers\\ZooDbController.cs",
+              "RelativeDocumentMoniker": "BackEnd\\Controllers\\ZooDbController.cs",
+              "ToolTip": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Controllers\\ZooDbController.cs",
+              "RelativeToolTip": "BackEnd\\Controllers\\ZooDbController.cs",
+              "ViewState": "AQIAANgAAAAAAAAAAAAAAIAAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T05:26:48.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Animal.cs",
+              "DocumentMoniker": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Models\\Animal.cs",
+              "RelativeDocumentMoniker": "BackEnd\\Models\\Animal.cs",
+              "ToolTip": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Models\\Animal.cs",
+              "RelativeToolTip": "BackEnd\\Models\\Animal.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T20:02:54.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserProfile.cs",
+              "DocumentMoniker": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Models\\UserProfile.cs",
+              "RelativeDocumentMoniker": "BackEnd\\Models\\UserProfile.cs",
+              "ToolTip": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Models\\UserProfile.cs",
+              "RelativeToolTip": "BackEnd\\Models\\UserProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T23:48:20.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\appsettings.json",
+              "RelativeDocumentMoniker": "BackEnd\\appsettings.json",
+              "ToolTip": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\appsettings.json",
+              "RelativeToolTip": "BackEnd\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-28T05:27:00.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserDetails.cs",
+              "DocumentMoniker": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Models\\UserDetails.cs",
+              "RelativeDocumentMoniker": "BackEnd\\Models\\UserDetails.cs",
+              "ToolTip": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Models\\UserDetails.cs",
+              "RelativeToolTip": "BackEnd\\Models\\UserDetails.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T01:23:04.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Program.cs",
+              "RelativeDocumentMoniker": "BackEnd\\Program.cs",
+              "ToolTip": "C:\\Users\\arvee\\Desktop\\etc\\project\\BackEnd\\BackEnd\\Program.cs",
+              "RelativeToolTip": "BackEnd\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T05:17:06.095Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
