@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './AddSecurityForm.css';
+import axios from 'axios';
 
 function AddSecurityForm() {
   const [date, setDate] = useState('');
@@ -25,6 +26,17 @@ function AddSecurityForm() {
     console.log('Severity Level:', severityLevel);
     // Backend logic for sending data to the backend should be implemented here
     // Example: sendSecurityEventDataToBackend({ date, time, eventDescription, location, severityLevel });
+  
+  const data = {
+    date: date,
+    time: time,
+    eventDescription: eventDescription,
+    location: location,
+    severityLevel: severityLevel
+  }
+  axios.post('http://localhost:5095/api/ZooDb/NewSecurityReport', data)
+    .then((res) =>{console.log(res); });
+    
   };
 
   const handleTimeChange = (event) => {
