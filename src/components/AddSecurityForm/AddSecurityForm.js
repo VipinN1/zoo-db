@@ -34,18 +34,7 @@ function AddSecurityForm() {
       severityLevel: severityLevel
     }
     axios.post('http://localhost:5095/api/ZooDb/NewSecurityReport', data)
-      .then((res) =>{console.log(res); });
-  
-  const data = {
-    date: date,
-    time: time,
-    eventDescription: eventDescription,
-    location: location,
-    severityLevel: severityLevel
-  }
-  axios.post('http://localhost:5095/api/ZooDb/NewSecurityReport', data)
-    .then((res) =>{console.log(res); });
-    
+      .then((res) =>{console.log(res); });  
   };
 
   const handleTimeChange = (event) => {
