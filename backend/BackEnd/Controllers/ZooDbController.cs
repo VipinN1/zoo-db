@@ -257,6 +257,44 @@ namespace BackEnd.Controllers
             return new JsonResult("New animal added");
         }
 
+
+        [HttpPost]
+        [Route("NewSecurityReport")]
+        public JsonResult NewSecurityReport([FromBody] SecurityReport newReport)
+        {
+            // Prepare the SQL query for inserting a new user must be same as database
+            string query = "INSERT INTO security_logs (log_date, log_time, event_description, event_location, severity_level) VALUES (@date, @time, @eventDescription, @location, @severityLevel)";
+
+            // Create a new DataTable to store the result (although in this case, there's no result to store)
+            DataTable table = new DataTable();
+
+            // Get the connection string from appsettings.json
+            string sqlDataSource = _configuration.GetConnectionString("ZooDBConnection");
+
+            // Open a connection to the database and execute the query
+            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            {
+                myCon.Open();
+                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                {
+                    // Add parameters to the command to prevent SQL injection
+                    myCommand.Parameters.AddWithValue("@date", newReport.date);
+                    myCommand.Parameters.AddWithValue("@time", newReport.time);
+                    myCommand.Parameters.AddWithValue("@eventDescription", newReport.eventDescription);
+                    myCommand.Parameters.AddWithValue("@location", newReport.location);
+                    myCommand.Parameters.AddWithValue("@severityLevel", newReport.severityLevel);
+
+
+
+                    // Execute the query (which in this case is an INSERT operation)
+                    myCommand.ExecuteNonQuery();
+                }
+            }
+
+            // Return a response indicating success
+            return new JsonResult("New security log added successfully");
+        }
+
     }
 
 }
